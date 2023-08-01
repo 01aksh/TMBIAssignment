@@ -6,7 +6,7 @@ function CustomButton(props) {
     <>
       <Button
         disabled
-        className="w-40 block h-11 border-none bg-buttonGreen rounded-30px text-white text-xs 
+        className="w-40 block h-10 border-none bg-buttonGreen rounded-30px text-white text-xs 
         outline-none focus:bg-menuGreen active:bg-menuGreen disabled:bg-militaryGreen"
         onClick={onClick}
         {...props}
