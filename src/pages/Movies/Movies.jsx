@@ -10,7 +10,7 @@ const Movies = () => {
   const [searchObj, setSearchObj] = useState("");
   const [display, setDisplay] = useState(false);
 
-  useEffect(() => {
+  useEffect( () => {
     APIServices.getMoviesApi()
       .then((response) => response.json())
       .then((response) => {
@@ -22,6 +22,7 @@ const Movies = () => {
         console.log(response.results);
       })
       .catch((err) => window.alert(err.message));
+   
   }, []);
 
   const onMovieSearch = async () => {
