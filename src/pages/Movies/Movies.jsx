@@ -28,7 +28,7 @@ const Movies = () => {
   const onMovieSearch = async () => {
     console.log("clicked", searchObj);
     setDisplay(false);
-    await APIServices.searchMovie(searchObj)
+    await APIServices.searchMovieApi(searchObj)
       .then((response) => response.json())
       .then((response) => {
         setMovies(response.results);
@@ -37,7 +37,6 @@ const Movies = () => {
       })
       .catch((err) => window.alert(err.message));
 
-    setSearchObj("");
   };
   return (
     <>
